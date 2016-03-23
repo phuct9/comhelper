@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topview_lyBody"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layTop"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/layTop2"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <!--Button
+                android:id="@+id/topview_btn01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日常生活"
+                android:textColor="@color/tvcolor_02" />
+
+            <Button
+                android:id="@+id/topview_btn02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="体調 管理"
+                android:textColor="@color/tvcolor_02" />
+
+            <Button
+                android:id="@+id/topview_btn03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="コミュニケーション"
+                android:textColor="@color/tvcolor_02" />
+
+            <Button
+                android:id="@+id/topview_btn04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="カスタマイズ"
+                android:textColor="@color/tvcolor_02" />
+
+            <Button
+                android:id="@+id/btTopViewEntertaiment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ENTERTAINMENT"
+                android:textColor="@color/tvcolor_02" /-->
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

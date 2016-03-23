@@ -1,0 +1,26 @@
+TopView 
+
+init()
+
+loadButtons(co screen_id)
+
+get buttons 
+
+neu get duoc buttons thi them layout
+them buttons vao layout
+
+
+MainLayout = new MainLayout() //khoi tao tao, can thong tin ve SCREEN tuong ung
+
+
+NormalButton
+
+
+NormalButton thì TopView cung dùng den mà Footer cung dùng den
+nhung trong Footer thi NormalButton chi speak thoi
+
+
+
+
+
+up code nen dau do

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#50000000"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layVolumeStatus"
+        android:background="@drawable/volumestatusempty"        
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/imgVolumeStatusSpeaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/volumestatus0" />
+
+        <Button
+            android:id="@+id/imgVolumeStatus0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/volumestatus1" />
+
+        <Button
+            android:id="@+id/imgVolumeStatus1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/volumestatus2" />
+
+        <Button
+            android:id="@+id/imgVolumeStatus2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/volumestatus3" />
+
+        <Button
+            android:id="@+id/imgVolumeStatus3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/volumestatus4" />
+    </LinearLayout>
+
+</LinearLayout>

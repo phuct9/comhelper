@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customize_lyRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/customize_btnPage01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_9p_small"
+            android:text="1"
+            android:textColor="@color/tvcolor_05" />
+
+        <Button
+            android:id="@+id/customize_btnPage02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_9p_small"
+            android:text="2"
+            android:textColor="@color/tvcolor_05" />
+
+        <Button
+            android:id="@+id/customize_btnPage03"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_9p_small"
+            android:text="3"
+            android:textColor="@color/tvcolor_05" />
+
+        <Button
+            android:id="@+id/customize_btnPage04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_9p_small"
+            android:text="4"
+            android:textColor="@color/tvcolor_05" />
+
+        <Button
+            android:id="@+id/customize_btnPage05"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_9p_small"
+            android:text="5"
+            android:textColor="@color/tvcolor_05" />
+
+        <TextView
+            android:id="@+id/customize_tvGuide"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="ここから選択してください"
+            android:textColor="#373737" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/customize_lyContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/health_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/customize_lyContentChild"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/customize_btnSTT_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:text="1"
+                    android:textColor="@color/tvcolor_01" />
+
+                <Button
+                    android:id="@+id/customize_btnText_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:maxLines="1"
+                    android:textColor="@color/tvcolor_01" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/customize_btnSTT_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:text="2"
+                    android:textColor="@color/tvcolor_01" />
+
+                <Button
+                    android:id="@+id/customize_btnText_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:maxLines="1"
+                    android:textColor="@color/tvcolor_01" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/customize_btnSTT_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:text="3"
+                    android:textColor="@color/tvcolor_01" />
+
+                <Button
+                    android:id="@+id/customize_btnText_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:maxLines="1"
+                    android:textColor="@color/tvcolor_01" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/customize_btnSTT_04"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:text="4"
+                    android:textColor="@color/tvcolor_01" />
+
+                <Button
+                    android:id="@+id/customize_btnText_04"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:maxLines="1"
+                    android:textColor="@color/tvcolor_01" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/customize_btnSTT_05"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:text="5"
+                    android:textColor="@color/tvcolor_01" />
+
+                <Button
+                    android:id="@+id/customize_btnText_05"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:maxLines="1"
+                    android:textColor="@color/tvcolor_01" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/customize_btnSTT_06"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:text="6"
+                    android:textColor="@color/tvcolor_01" />
+
+                <Button
+                    android:id="@+id/customize_btnText_06"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:maxLines="1"
+                    android:textColor="@color/tvcolor_01" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/customize_btnSTT_07"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:text="7"
+                    android:textColor="@color/tvcolor_01" />
+
+                <Button
+                    android:id="@+id/customize_btnText_07"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:maxLines="1"
+                    android:textColor="@color/tvcolor_01" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/customize_btnSTT_08"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:text="8"
+                    android:textColor="@color/tvcolor_01" />
+
+                <Button
+                    android:id="@+id/customize_btnText_08"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:maxLines="1"
+                    android:textColor="@color/tvcolor_01" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/customize_btnSTT_09"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:text="9"
+                    android:textColor="@color/tvcolor_01" />
+
+                <Button
+                    android:id="@+id/customize_btnText_09"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:maxLines="1"
+                    android:textColor="@color/tvcolor_01" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/customize_btnSTT_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:text="10"
+                    android:textColor="@color/tvcolor_01" />
+
+                <Button
+                    android:id="@+id/customize_btnText_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_9p_small"
+                    android:maxLines="1"
+                    android:textColor="@color/tvcolor_01" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/health_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/health_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_9p_small"
+        android:text="@string/front"
+        android:textColor="@color/tvcolor_02" />
+
+    <Button
+        android:id="@+id/btAllBody"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_9p_small"
+        android:text="@string/allbody"
+        android:textColor="@color/tvcolor_02" />
+    
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/health_lyLeft"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@drawable/health_bg"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/health_lyImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" >
+
+                <!-- ImageView
+                    android:id="@+id/health_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/body_front" /-->
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/health_guide02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="気になる部分にタッチしてください"
+                android:textColor="#373737" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/health_lyMenu"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/health_bg"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/health_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/health_titlebg"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/health_guide01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="話す言葉を選んでください"
+                android:textColor="#373737" />
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="@android:color/transparent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/health_lyContent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

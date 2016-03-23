@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layBkgr"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/mainAct_imgBG"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/lySys"
+            android:layout_width="300px"
+            android:layout_height="200px"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <!--
+            Button
+                android:id="@+id/btVolumeRdc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btvolumerdc"
+                android:text="" />
+
+            <Button
+                android:id="@+id/btVolumeInc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btvolumeinc"
+                android:text="" />
+
+            
+            
+            <customize.SleepButton
+                android:id="@+id/btSleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/btsleep"
+                android:text="" />
+            
+            <Button
+	            android:id="@+id/footerview_emergency"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:text="緊\n急"
+	            android:textColor="@color/tvcolor_07" /
+            -->
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/lyContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            
+
+            <LinearLayout
+                android:id="@+id/mainAct_lyContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/lyTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <customize.BackButton
+                        android:id="@+id/mainAct_tvBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top" />
+
+                    <ImageView
+                        android:id="@+id/mainAct_btnSettings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/settings" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+                        <TextView
+                            android:id="@+id/mainAct_tvTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/A"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <utilities.DigitalClock
+                        android:id="@+id/mainAct_Clock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:text="DigitalClock"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/lyMain"
+                    android:layout_width="300px"
+                    android:layout_height="400px"
+                    android:orientation="vertical" >
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyAwly"
+                    android:layout_width="300px"
+                    android:layout_height="200px"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </LinearLayout>
+            
+            <views.VolumeView
+                android:id="@+id/vVolume"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

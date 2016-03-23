@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/com_lyRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical" >
+<!-- android:background="@drawable/comtop_bg" -->
+
+    <LinearLayout
+        android:id="@+id/com_lyTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/com_Button00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/comtab_1st"
+            android:text="挨拶"
+            android:textColor="#424242" />
+
+        <Button
+            android:id="@+id/com_Button01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/comtab_else"
+            android:text="気候"
+            android:textColor="#424242" />
+
+        <Button
+            android:id="@+id/com_Button02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/comtab_else"
+            android:text="相槌"
+            android:textColor="#424242" />
+    </LinearLayout>
+    <!-- android:background="@drawable/com_bg" -->
+
+    <TextView
+        android:id="@+id/com_guide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="clip_vertical|right"
+        android:text="ここから選択してください "
+        android:textColor="#373737" />
+
+    <RelativeLayout
+        android:id="@+id/com_lyContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </RelativeLayout>
+
+</LinearLayout>
