@@ -1,16 +1,13 @@
 package views;
 
 import jit.vn.onseitaiwa2.R;
-import models.Screen;
 import models.ScreenButton;
 import settings.UIDATA;
 import utilities.SetViewSizeByPixel;
 import utilities.Util;
 import java.util.List;
 import android.content.Context;
-import android.graphics.Color;
 import android.view.View;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import customize.NormalButton;
 
@@ -24,11 +21,13 @@ public class FooterView extends CommuniticationHelperView{
 		super(ctx);
 		size = new SetViewSizeByPixel(ctx);
 		inflate(ctx, R.layout.footerview, this);
-		Screen.getByScreenId("20-10");
-		List<ScreenButton> scrbts = ScreenButton.getByScreen("20-10");
-		softButtons(scrbts);
+		loadButtons("20-10");
 	}
 	
+	private void loadButtons(String screen_id){
+		List<ScreenButton> scrbts = ScreenButton.getByScreen(screen_id);
+		softButtons(scrbts);
+	}
 	
 	private void softButtons(List<ScreenButton> scrbts){
 		width = 1080;
@@ -50,13 +49,11 @@ public class FooterView extends CommuniticationHelperView{
 			LinearLayout lyCol = new LinearLayout(getContext());
 			lyCol.setLayoutParams(new LinearLayout.LayoutParams(0,LayoutParams.MATCH_PARENT,1));
 			lyCol.setOrientation(VERTICAL);
-			
 			for(int j=0;j<num_on_col;j++){
 				if (id<num){
-					Button bt = new NormalButton(getContext());
-					bt.setLayoutParams(new LinearLayout.LayoutParams(size.RW(width/col),size.RH(height/num_on_col)));
 					final ScreenButton scrbt = scrbts.get(id);
-					bt.setText(scrbt.title);
+					NormalButton bt = new NormalButton(getContext(),scrbt);
+					bt.setLayoutParams(new LinearLayout.LayoutParams(size.RW(width/col),size.RH(height/num_on_col)));
 					id++;
 					lyCol.addView(bt);
 					bt.setOnClickListener(new OnClickListener(){

@@ -31,7 +31,7 @@ public class EmergencyDialog extends Dialog{
 		getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 		view = new EmergencyView(context);
 		setContentView(R.layout.dialog_emergency);
-		setButtons();
+		loadButtons("30-00");
 		
 //		Btn Exit
 		Button btnExit = (Button) findViewById(R.id.emergency_btnExit);
@@ -55,10 +55,10 @@ public class EmergencyDialog extends Dialog{
 		setCancelable(false);
 	}
 	
-	public void setButtons(){
+	public void loadButtons(String screen_id){
 		LinearLayout lyContent = (LinearLayout) findViewById(R.id.emergency_content);
-		Screen.getByScreenId("30-00");
-		List<ScreenButton> scrbts = ScreenButton.getByScreen("30-00");
+		Screen.getByScreenId(screen_id);
+		List<ScreenButton> scrbts = ScreenButton.getByScreen(screen_id);
 		int col = 1;
 		int num = scrbts.size();
 		int num_on_col = num/col; 
@@ -69,10 +69,9 @@ public class EmergencyDialog extends Dialog{
 			lyCol.setOrientation(LinearLayout.VERTICAL);
 			for(int j=0;j<num_on_col;j++){
 				if (id<num){
-					Button bt = new NormalButton(getContext());
-					bt.setLayoutParams(new LinearLayout.LayoutParams(size.RW(1000),size.RH(150)));
 					final ScreenButton scrbt = scrbts.get(id);
-					bt.setText(scrbt.title);
+					Button bt = new NormalButton(getContext(),scrbt);
+					bt.setLayoutParams(new LinearLayout.LayoutParams(size.RW(1000),size.RH(150)));
 					id++;
 					lyCol.addView(bt);
 					bt.setOnClickListener(new View.OnClickListener(){

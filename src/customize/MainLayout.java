@@ -3,26 +3,40 @@ package customize;
 import java.util.List;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.Gravity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
 import jit.vn.onseitaiwa2.OnseitaiwaApp;
+import jit.vn.onseitaiwa2.R;
 import models.Screen;
 import models.ScreenButton;
+import settings.UIDATA;
 import utilities.SetViewSizeByPixel;
+import utilities.Util;
+import views.TopView;
 
 public class MainLayout  extends LinearLayout {
 
 	public Screen screen;
+	public int width;
+	public int height;
+	public SetViewSizeByPixel size;
+	public int row;
+	public int col;
+	private OnseitaiwaApp app;
+	public TopView top;
 	
 	public MainLayout(Context ctx,Screen screen) {
 		super(ctx);
 		this.screen = screen;
-		setOrientation(VERTICAL);
+		setOrientation(HORIZONTAL);
 		setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
 		setGravity(Gravity.CENTER_HORIZONTAL);
+		app = (OnseitaiwaApp) ctx.getApplicationContext();
 //		int w = Integer.parseInt(parser.getAttributeValue(null,"width"));
 //		int h = Integer.parseInt(parser.getAttributeValue(null,"height"));
 //		button_width = Integer.parseInt(parser.getAttributeValue(null,"button_width"));
@@ -35,15 +49,45 @@ public class MainLayout  extends LinearLayout {
 //		setGravity(Gravity.CENTER_HORIZONTAL);
 	}
 
-	public void addButtons(List<ScreenButton> btns,SetViewSizeByPixel size) {
-		for(int i = 0; i < btns.size(); i++){
-			final ScreenButton scrbt = btns.get(i); 
-			Button bt = new NormalButton(this,scrbt);
-			//bt.setText(scrbt.title+" "+scrbt.screen_id+" "+scrbt.next_screen+" "+scrbt.speak);
-			bt.setText(scrbt.title);
-			bt.setLayoutParams(new LinearLayout.LayoutParams(size.RW(1080),size.RW(188)));
-			
-			addView(bt);
+	public void softButtons(List<ScreenButton> scrbts){
+		int num = scrbts.size();
+		col = num/row;
+		if (num%row>0){
+			col += 1;
+		}
+		Util.log("col = ",col);
+		int num_on_col = num/col;
+		if (num%col>0){
+			num_on_col+=1;
+		}
+		if (num_on_col < row){
+			num_on_col = row;
+		}
+		int id = 0;
+		for(int i=0;i<col;i++){
+			LinearLayout lyCol = new LinearLayout(getContext());
+			lyCol.setLayoutParams(new LinearLayout.LayoutParams(0,LayoutParams.MATCH_PARENT,1));
+			lyCol.setOrientation(VERTICAL);
+			for(int j=0;j<num_on_col;j++){
+				if (id<num){
+					final ScreenButton scrbt = scrbts.get(id);
+					NormalButton bt = new NormalButton(getContext(),scrbt);
+					lyCol.addView(bt);
+					bt.setLayoutParams(new LinearLayout.LayoutParams(size.RW(width/col),size.RH(height/num_on_col)));
+					id++;
+					bt.setOnClickListener(new OnClickListener(){
+						@Override
+						public void onClick(View v){
+							if (scrbt.speak!=null){
+								app.tts.speak(scrbt.speak);
+							}else{
+								top.loadButtons(scrbt.next_screen);
+							}
+						}
+					});
+				}
+			}
+			addView(lyCol);
 		}
 	}
 
