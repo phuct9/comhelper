@@ -30,7 +30,5 @@ public class NormalButton extends MyButton implements android.view.View.OnClickL
 			
 		}
 	}
-
-	
 	
 }

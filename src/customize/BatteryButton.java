@@ -5,7 +5,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Canvas;
 import android.os.BatteryManager;
+import utilities.Util;
 
 public class BatteryButton extends MyButton {
 	
@@ -22,6 +24,13 @@ public class BatteryButton extends MyButton {
 	public BatteryButton(Context ctx) {
 		super(ctx);
 		((Activity)ctx).registerReceiver(this.mBatInfoReceiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+		getPaint().setTextSize(20);
+	}
+	
+	@Override
+	public void draw(Canvas c) {
+		super.draw(c);
+		Util.log(getPaint().getTextSize(),getHeight());
 	}
 
 }
